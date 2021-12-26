@@ -1,0 +1,51 @@
+#robot {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(-50%, -250%);
+  width: 20%;
+}
+
+.messageBox {
+  position: fixed;
+  top: 40%;
+  left: 130%;
+  width: 900px;
+  line-height: 200%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+.join-in {
+  position: fixed;
+  top: 65%;
+  left: 110%;
+  width: 300px;
+  font-size: 40px;
+  @include animationRobotButtons;
+}
+
+.skip {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 100px;
+  font-size: 20px;
+  animation: skipBtnOpacity 5s linear;
+  @include animationRobotButtons;
+}
+
+@keyframes skipBtnOpacity {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

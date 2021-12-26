@@ -1,0 +1,50 @@
+@mixin mainBoxesSet {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 1200px;
+  height: 870px;
+  border-radius: 5%;
+}
+
+@mixin animationRobotButtons {
+  border: 2px solid yellowgreen;
+  background-color: transparent;
+  color: yellowgreen;
+  letter-spacing: 3px;
+  font-weight: bold;
+  transition: 0.3s;
+  padding: 10px;
+  &:hover {
+    background-color: yellowgreen;
+    color: white;
+  }
+}
+
+@mixin linearBackground {
+  background: linear-gradient(to right, #0033cc 0%, #cc66ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@mixin leftContentIconsProperties {
+  padding: 15px;
+  border: 2px solid black;
+  border-radius: 50%;
+  background: linear-gradient(to right, #0033cc 0%, #cc66ff 100%);
+  -webkit-text-fill-color: black;
+}
+
+@mixin progressBarsProperties {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0;
+  padding-bottom: 5px;
+  &-percentage {
+    font-size: 13px;
+    padding-left: 80px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+}

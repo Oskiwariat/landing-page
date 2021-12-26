@@ -1,0 +1,212 @@
+.right-content {
+  position: fixed;
+  top: -870px;
+  right: 0;
+  width: 290px;
+  height: 870px;
+  background-color: black;
+  border-top-right-radius: 55px;
+  border-bottom-right-radius: 55px;
+  transition: 0.8s;
+  background-color: rgb(250, 248, 248);
+
+  &.show {
+    top: 0;
+
+    i.rotate {
+      transform: rotate(180deg);
+    }
+  }
+
+  .guy {
+    position: absolute;
+    top: -83%;
+    left: 10%;
+    z-index: 1;
+    width: 20%;
+  }
+  .hand {
+    transform-origin: left;
+    animation: hand 0.3s infinite linear;
+  }
+
+  .user-image {
+    position: relative;
+    top: 23px;
+    left: 190px;
+    width: 7%;
+  }
+
+  .burger {
+    position: fixed;
+    z-index: 1;
+    top: 25px;
+    right: 25px;
+    background: black;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transition: 0.5s;
+    font-size: 30px;
+  }
+
+  .card {
+    border-style: none;
+  }
+
+  .collapse {
+    position: relative;
+  }
+
+  .statistic {
+    position: relative;
+    height: 380px;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    padding: 10px 10px;
+    background-color: rgb(250, 248, 248);
+    &__title {
+      position: absolute;
+      font-size: 19px;
+      font-weight: bold;
+    }
+
+    .circle {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 180px;
+      height: 180px;
+      border: 15px solid;
+      border-image-slice: 1;
+      border-image-source: linear-gradient(to right, #0033cc 0%, #cc66ff 100%);
+      &__number {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -80%);
+        font-weight: bold;
+      }
+      &__type {
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, 40%);
+        font-size: 13px;
+      }
+    }
+
+    .procents {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, 100%);
+      width: 250px;
+      height: 100px;
+      padding: 20px 10px 0px 10px;
+
+      .progress {
+        margin-bottom: 20px;
+        &-bar {
+          background: linear-gradient(to right, #0033cc 0%, #cc66ff 100%);
+        }
+      }
+
+      &__artwork {
+        @include progressBarsProperties;
+      }
+
+      &__cancellation {
+        @include progressBarsProperties;
+      }
+    }
+  }
+
+  .activity {
+    position: relative;
+    background-color: rgb(250, 248, 248);
+    margin: 40px 0 0 0;
+    padding: 10px 10px;
+
+    &__title {
+      font-size: 19px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    &__subtitle {
+      cursor: pointer;
+      font-size: 10px;
+      padding-left: 50px;
+      text-decoration: none;
+    }
+    &__info {
+      position: relative;
+      padding: 20px 10px 10px 10px;
+      transition: 0.3s;
+      &:hover {
+        box-shadow: 0 0 15px 3px black;
+        cursor: pointer;
+        background-color: rgb(235, 246, 255);
+      }
+    }
+    &__info-box {
+      position: relative;
+    }
+    &__info-box-circle {
+      display: inline-block;
+      position: relative;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: linear-gradient(to right, #0033cc 0%, #cc66ff 100%);
+    }
+    &__icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background: linear-gradient(to right, white 100%, white 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      transform: translate(-75%, -50%);
+      font-size: 20px;
+    }
+    &__info-box-title {
+      position: absolute;
+      top: 5%;
+      left: 28%;
+      font-size: 15px;
+      font-weight: bold;
+      color: black;
+    }
+    &__info-box-minutes {
+      position: absolute;
+      top: 70%;
+      left: 120%;
+      font-size: 9px;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+    &__info-box-subtitle {
+      top: 50%;
+      left: 29%;
+      position: absolute;
+      font-size: 11px;
+      font-weight: bold;
+    }
+  }
+}
+
+@keyframes hand {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(2deg);
+  }
+}

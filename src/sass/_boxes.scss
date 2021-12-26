@@ -1,0 +1,28 @@
+.box {
+  @include mainBoxesSet;
+  transform: translate(-50%, -50%) scale(0);
+  background-color: white;
+  overflow: hidden;
+  animation: scaleBox 3s linear forwards paused 1s;
+  background-color: rgb(235, 246, 255);
+}
+
+.shadowbox {
+  @include mainBoxesSet;
+  transform: translate(-49.5%, -50%) rotate(4deg) scale(0);
+  background-color: rgb(216, 215, 215);
+  border-bottom-left-radius: 50%;
+  animation: scaleShadowBox 3.5s linear forwards paused 2.5s;
+}
+
+@keyframes scaleBox {
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes scaleShadowBox {
+  100% {
+    transform: translate(-49.5%, -50%) rotate(4deg) scale(1);
+  }
+}

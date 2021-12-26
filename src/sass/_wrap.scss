@@ -1,0 +1,11 @@
+.wrap {
+  background-color: #000;
+  height: 100vh;
+  animation: changeBgColor 3s linear forwards paused;
+}
+
+@keyframes changeBgColor {
+  100% {
+    background-color: #ccc;
+  }
+}

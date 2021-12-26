@@ -1,0 +1,74 @@
+.left-content {
+  padding-left: 15px;
+  padding-right: 15px;
+  overflow: hidden;
+  background-color: white;
+
+  .logged-person {
+    text-align: center;
+    margin-top: 50px;
+    padding-bottom: 50px;
+
+    &__name {
+      @include linearBackground;
+      font-weight: bold;
+      font-size: 30px;
+    }
+    &__icon {
+      @include linearBackground;
+      padding-right: 15px;
+      font-size: 35px;
+    }
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    border-top: 2px solid black;
+    margin-right: 15px;
+  }
+
+  .container-fluid {
+    flex-grow: 1;
+    transition: 0.4s;
+    margin-bottom: 1px;
+    &:hover {
+      transform: translateX(50px);
+      cursor: pointer;
+    }
+    &:hover .move {
+      animation: ring 0.5s linear infinite;
+    }
+
+    .move {
+      @include linearBackground;
+      font-size: 28px;
+      font-weight: bold;
+    }
+  }
+  .container-fluid.active i.move {
+    @include leftContentIconsProperties;
+  }
+  i.move.active {
+    @include leftContentIconsProperties;
+  }
+}
+
+@keyframes ring {
+  0% {
+    transform: rotate(10deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}

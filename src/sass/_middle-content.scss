@@ -1,0 +1,348 @@
+// MIDDLE-CONTENT
+
+.middle-content {
+  background-color: rgb(235, 246, 255);
+  border-top-right-radius: 5%;
+  border-bottom-right-radius: 5%;
+  display: flex;
+  flex-direction: column;
+
+  // MIDDLE-SEARCHER
+
+  .searcher {
+    margin: 0 0 5px 0;
+    padding: 10px;
+
+    &__box {
+      margin: 30px 0 20px 40px;
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 15px;
+      width: 45%;
+      transition: 1s;
+    }
+    &__icon {
+      font-size: 30px;
+      padding-right: 15px;
+    }
+    &__input {
+      border-style: none;
+      padding: 10px;
+      background-color: transparent;
+      width: 85%;
+      letter-spacing: 2px;
+      border-radius: 10px;
+    }
+  }
+
+  // MIDDLE-AUCTION
+
+  .auction {
+    position: relative;
+    height: 24%;
+    width: 90%;
+    padding: 0;
+    margin: 0 auto;
+    opacity: 0.8;
+    transition: 0.8s;
+
+    &:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
+
+    &__title {
+      position: absolute;
+      top: 10%;
+      left: 5%;
+      color: white;
+      font-weight: bold;
+      z-index: 1;
+      font-size: 15px;
+      letter-spacing: 2px;
+    }
+    &__background-image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 30px;
+    }
+
+    &__box {
+      display: flex;
+      position: relative;
+      top: 50%;
+      left: 0;
+      height: 50%;
+      width: 100%;
+      backdrop-filter: blur(5px);
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      box-shadow: 0 0 8px 8px white;
+
+      &-info {
+        flex-basis: 40%;
+        transition: 0.8s;
+        &-title {
+          color: white;
+          font-weight: bold;
+          padding: 20px 0 0 25px;
+          transition: 0.8s;
+        }
+        &-author {
+          color: white;
+          font-size: 12px;
+          padding-left: 26px;
+        }
+      }
+
+      .bid {
+        display: flex;
+        flex-grow: 1;
+
+        &__info {
+          flex-basis: 33%;
+          position: relative;
+          padding: 5px;
+
+          &-now {
+            position: absolute;
+            top: 13%;
+            color: white;
+            font-size: 12px;
+            letter-spacing: 2px;
+          }
+          &-eth {
+            position: absolute;
+            top: 35%;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+          }
+          &-money {
+            position: absolute;
+            top: 73%;
+            color: white;
+            font-size: 12px;
+            letter-spacing: 2px;
+          }
+        }
+
+        .deadline {
+          flex-grow: 1;
+          position: relative;
+          border-left: 2px solid black;
+
+          &__title {
+            position: absolute;
+            top: 13%;
+            left: 8%;
+            color: white;
+            letter-spacing: 2px;
+            font-size: 12px;
+            transition: 0.8s;
+          }
+          &__button {
+            position: absolute;
+            top: 30%;
+            right: 5%;
+            color: white;
+            font-size: 14px;
+            color: white;
+            padding: 10px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            border-radius: 50px;
+            border: 2px solid white;
+            background-color: transparent;
+            transition: 0.8s;
+            &:hover {
+              background-color: #fff;
+              color: darkviolet;
+            }
+          }
+
+          &__time {
+            display: flex;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-102%, -10%);
+            color: white;
+            text-align: center;
+            transition: 0.8s;
+            &-hours {
+              font-weight: bold;
+              margin-right: 10px;
+              &-title {
+                font-weight: normal;
+                font-size: 12px;
+              }
+            }
+            &-minutes {
+              font-weight: bold;
+              margin-right: 10px;
+              &-title {
+                font-weight: normal;
+                font-size: 12px;
+              }
+            }
+            &-seconds {
+              font-weight: bold;
+              &-title {
+                font-weight: normal;
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // MIDDLE-SUMMARY
+
+  .weekly-summary {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+    padding: 5px;
+    margin: 20px auto 0 auto;
+    transition: 0.8s;
+
+    &-title {
+      flex-basis: 100%;
+      font-weight: bold;
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+
+    .figure {
+      position: relative;
+      display: flex;
+      flex-basis: 47%;
+      padding: 20px;
+      border-radius: 20px;
+      background-color: #fff;
+      transition: 0.2s;
+      &__number {
+        font-weight: bold;
+        flex-basis: 50%;
+        font-size: 22px;
+        margin-left: 50px;
+        margin-top: 10px;
+      }
+      &__title {
+        font-weight: normal;
+        font-size: 16px;
+      }
+      &__chart-image {
+        position: absolute;
+        flex-basis: 50%;
+        top: 10%;
+        left: 50%;
+        width: 45%;
+      }
+      &:hover {
+        background: linear-gradient(to right, #0033cc 0%, #cc66ff 100%);
+        cursor: pointer;
+        box-shadow: 0 0 15px 3px black;
+        color: white;
+      }
+    }
+  }
+
+  // MIDDLE-ARTWORKS
+
+  .artworks {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    transition: 0.8s;
+
+    .top {
+      display: flex;
+      margin: 20px 0;
+
+      &__title {
+        font-weight: bold;
+        font-size: 25px;
+        margin-right: 45px;
+      }
+      &__collectibles {
+        margin: auto 0;
+        margin-right: 45px;
+        cursor: pointer;
+      }
+      &__utility {
+        margin: auto 0;
+        cursor: pointer;
+      }
+    }
+
+    .bot {
+      display: flex;
+      justify-content: space-between;
+      &__box {
+        position: relative;
+        height: 205px;
+        width: 190px;
+        background-color: #fff;
+        border-radius: 15px;
+        padding: 10px;
+        transition: 0.2s;
+        &:hover {
+          background: linear-gradient(to right, #0033cc 0%, #cc66ff 100%);
+          color: white;
+          cursor: pointer;
+          box-shadow: 0 0 15px 3px black;
+        }
+      }
+      &__image {
+        position: absolute;
+        width: 90%;
+        height: 60%;
+        border-radius: 15px;
+      }
+      &__title {
+        position: absolute;
+        top: 70%;
+        left: 28%;
+        width: 100%;
+        font-size: 17px;
+      }
+      &__points {
+        position: absolute;
+        top: 85%;
+        left: 25%;
+        font-size: 12px;
+        font-weight: bold;
+        &-icon {
+          position: absolute;
+          top: 83%;
+          left: 10%;
+          background-color: black;
+          color: white;
+          font-size: 14px;
+          padding: 5px;
+          border-radius: 50%;
+        }
+      }
+      &__likes {
+        position: absolute;
+        top: 84%;
+        right: 10%;
+        font-size: 12px;
+        font-weight: bold;
+        &-icon {
+          position: absolute;
+          top: 85%;
+          right: 23%;
+        }
+      }
+    }
+  }
+}
